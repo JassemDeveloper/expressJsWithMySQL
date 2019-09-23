@@ -1,0 +1,53 @@
+{% extends './layouts/master.html' %}
+{% block content %}
+
+<div class='row '>
+<div class='col-12 text-center'>
+<h1> {{title}} </h1>
+</div>
+<a class='btn btn-primary' href='/page'> Back To Home Page </a>
+</div>
+<div class='row'>
+{% for o in data %}
+<div class='col-12'>
+<div class='card' >
+<div class='row'>
+<div class='col-6'>
+<img class='profile-img' src='/img/profile.png'>
+</div>
+<div class='col-6'>
+<form id='myform'>
+<div class='form-group'>
+<label> Name </label>
+<input type='text' name='name' class='form-control field' value='{{o.name}}' disabled/>
+</div>
+<div class='form-group'>
+<label> age </label>
+<input type='text' name='age' class='form-control field' value='{{o.age}}' disabled/>
+</div>
+<div class='form-group'>
+<label> Salary </label>
+<input type='text' name='salary' class='form-control field' value='{{o.salary}}' disabled/>
+</div>
+<div class='form-group'>
+<label> Hire Date </label>
+<input type='text' name='hire_date' class='form-control field' value='{{o.hire_date}}' disabled/>
+</div>
+<div class='form-group'>
+<label> Hired Since </label>
+<input type='text'  class='form-control' value='{{o.hired_since}}' disabled/>
+</div>
+<a  id='deleteB' class='btn btn-danger clickableB' data-action='delete' data-id='{{o.id}}'>Delete </a>
+<a  id='updateB' class='btn btn-success clickableB' data-action='update' data-id='{{o.id}}'>Update </a>
+<a  id='saveB' class='btn btn-success clickableB' data-action='save' data-id='{{o.id}}'>Save </a>
+<a  id='cancelB' class='btn btn-primary clickableB' data-action='cancel' data-id='{{o.id}}'>Cancel </a>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

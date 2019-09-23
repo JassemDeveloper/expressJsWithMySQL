@@ -1,0 +1,67 @@
+body{
+    font-size: 20px;
+    color: black;
+    font-style: italic;
+    background: goldenrod;
+}
+
+
+.animation{
+    animation: animate 0.9s ease-in-out;
+}
+.profile-img {
+	width: 100%;
+	height: 100%;
+}
+
+#deleteB,#updateB,#cancelB,#saveB,#loadMore,#clearB{
+    color: white;
+}
+
+#cancelB,#saveB{
+    display: none;
+}
+.homePageCard {
+	/* height: 50px; */
+	line-height: 62px;
+	font-size: 40px;
+	box-shadow: 1px 1px 2px 3px rgba(100,100,100,0.5);
+}
+
+.homePageCard:hover{
+   background: gray; 
+   color: white;
+}
+
+.info-card{
+        box-shadow: 1px 1px 4px 1px palegoldenrod;
+}
+
+.info-card:hover {
+	background: gray;
+	color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+
+#deleteB:hover,#updateB:hover,#cancelB:hover,#saveB:hover,#loadMore:hover,#clearB:hover{
+    cursor: pointer;
+    background: black;
+    transition: all 0.5s ease-in-out;
+    font-style: normal;
+}
+.card {
+	margin-bottom: 10px;
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

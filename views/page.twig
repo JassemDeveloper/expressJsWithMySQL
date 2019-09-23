@@ -1,0 +1,34 @@
+{% extends './layouts/master.html' %}
+{% block nav %}
+<div class='row'>
+<div class='col-12 text-center'>
+<h1> {{title}} </h1>
+</div>
+</div>
+{% include './layouts/nav.html' %}
+{% endblock %}
+
+{% block content %}
+<div class='row'>
+<div class='col-12'>
+<a id='add' class='btn btn-primary' href='/new'>Add New Record</a>
+<hr>
+</div>
+</div>
+{% if isEmpty !=true %}
+<div class='row' id='data'>
+</div>
+{% else %}
+<div class='row '>
+<div class='col-12 text-center'>
+<h4> {{msg}} </h5>
+</div>
+</div>
+{% endif %}
+<div class='row'>
+<div id='pagination'>
+</div>
+</div>
+
+{% endblock %}
+

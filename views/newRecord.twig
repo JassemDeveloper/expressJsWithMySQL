@@ -1,0 +1,49 @@
+{% extends './layouts/master.html' %}
+{% block content %}
+
+<div class='row '>
+<div class='col-12 text-center'>
+<h1> {{title}} </h1>
+</div>
+<a class='btn btn-primary' href='/page'> Back To Home Page </a>
+</div>
+<div class='row'>
+<div class='col-12'>
+<div class='card' >
+<div class='row'>
+<div class='col-6'>
+<img class='profile-img' src='/img/profile.png'>
+</div>
+<div class='col-6'>
+<form id='myform'>
+<div class='form-group'>
+<label> Name </label>
+<input type='text' name='name' id='name' class='form-control field'   required />
+</div>
+<div class='form-group'>
+<label> age </label>
+<input type='text' name='age' id='age' class='form-control field'   required/>
+</div>
+<div class='form-group'>
+<label> Salary </label>
+<input type='text' name='salary'  id='salary' class='form-control field'  required />
+</div>
+<div class='form-group'>
+<label> Hire Date </label>
+<div id='hire_date'>
+<input type='text' name='hire_date'  id='date' class='form-control field clickableB'  required/>
+</div>
+</div>
+<input type='submit' id='saveB' class='btn btn-primary d-inline' data-action='new' value='Save' />
+<a  id='clearB' class='btn btn-primary clickableB d-inline' data-action='clear'>Clear </a>
+
+<br/>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
